@@ -12,8 +12,6 @@
 <script>
     function inSoNguyenTo(){
         let a = +document.getElementById("soNguyento").value;
-        let i = 3;
-        let j = 2;
         let count = 0;
         let text = "";
         let check = true;
@@ -22,6 +20,7 @@
             for (let j = Math.sqrt(i); j < i; j++) {
                 if (i%j==0){
                 check = false;
+                break;
                 }
             }
             if (check){
