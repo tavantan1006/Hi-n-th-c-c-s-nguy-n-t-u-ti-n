@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị các số nguyên tố đầu tiên</title>
+</head>
+<body>
+<label for="soNguyento">Nhập số lượng số nguyên tố cần in ra : </label><br><br>
+<input type="text" id="soNguyento">
+<input type="button" value="Check" onclick="inSoNguyenTo()">
+<div id="ketqua"></div>
+<script>
+    function inSoNguyenTo(){
+        let a = +document.getElementById("soNguyento").value;
+        let i = 3;
+        let j = 2;
+        let count = 0;
+        let text = "";
+        let check = true;
+        for (let i = 3; count < a ; i++) {
+            check = true;
+            for (let j = Math.sqrt(i); j < i; j++) {
+                if (i%j==0){
+                check = false;
+                }
+            }
+            if (check){
+                text = text + i + " ";
+                count++;
+            }
+        }
+        document.getElementById("ketqua").innerText = text;
+    }
+</script>
+</body>
+</html>
