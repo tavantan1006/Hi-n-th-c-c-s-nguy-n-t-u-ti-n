@@ -17,8 +17,8 @@
         let check = true;
         for (let i = 3; count < a ; i++) {
             check = true;
-            for (let j = Math.sqrt(i); j < i; j++) {
-                if (i%j==0){
+            for (let j = Math.round(Math.sqrt(i)); j < i; j++) {
+                if (i%j==0){git
                 check = false;
                 break;
                 }
